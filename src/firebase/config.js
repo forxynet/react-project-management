@@ -1,24 +1,23 @@
-import firebase from "firebase/app";
-import 'firebase/firestore';
-import 'firebase/auth';
+import firebase from 'firebase/app'
+import 'firebase/firestore'
+import 'firebase/auth'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDDAJqhdWXeNoQ2iCl5_9YVnETmE9qlXFc",
-  authDomain: "react-project-management-5516d.firebaseapp.com",
-  projectId: "react-project-management-5516d",
-  storageBucket: "react-project-management-5516d.firebasestorage.app",
-  messagingSenderId: "1029543861192",
-  appId: "1:1029543861192:web:7a430e9a81f08bb9bb3efd"
+  apiKey: "AIzaSyDhBK2TeNcfos7xnMWhmCEBPf4Fwk3-S6M",
+  authDomain: "react-management-app-ea9d1.firebaseapp.com",
+  projectId: "react-management-app-ea9d1",
+  storageBucket: "react-management-app-ea9d1.firebasestorage.app",
+  messagingSenderId: "314203444206",
+  appId: "1:314203444206:web:a2420a91b24bef5c41b4ff"
 };
-
 // init firebase
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig)
 
-// init service
-const projectFirestore = firebase.firestore();
-const projectAuth = firebase.auth();
+// init services
+const projectFirestore = firebase.firestore()
+const projectAuth = firebase.auth()
 
 // timestamp
-const timestamp = firebase.firestore.Timestamp;
+const timestamp = firebase.firestore.Timestamp
 
-export { projectFirestore, projectAuth, timestamp };
+export { projectFirestore, projectAuth, timestamp }
