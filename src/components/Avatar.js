@@ -5,7 +5,10 @@ export default function Avatar({ user }) {
   return (
     <div className='avatar'>
       {user && (
-        <img src={user.photoURL} alt="user avatar" />
+        <>
+          <img src={user.photoURL} alt="user avatar" />
+
+        </>
       )}
     </div>
   )

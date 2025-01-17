@@ -1,6 +1,7 @@
 {
   "projects": {
-    "y": "thedojosite-b9d77"
+    "y": "thedojosite-96eec",
+    "default": "thedojosite-96eec"
   },
   "targets": {},
   "etags": {}
