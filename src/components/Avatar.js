@@ -1,10 +1,12 @@
 import React from 'react'
 import './Avatar.css';
 
-export default function Avatar({ url }) {
+export default function Avatar({ user }) {
   return (
     <div className='avatar'>
-      <img src={url} alt="user avatar" />
+      {user && (
+        <img src={user.photoURL} alt="user avatar" />
+      )}
     </div>
   )
 }

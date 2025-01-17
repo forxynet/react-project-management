@@ -20,9 +20,9 @@ function App() {
     <div className="App">
       {authIsReady && (
         <BrowserRouter>
-          <Sidebar />
+          <Sidebar user={user} />
           <div className="container">
-            <Navbar />
+            <Navbar user={user} />
             <Switch>
               <Route exact path="/">
                 {!user && <Redirect to="/login" />}
