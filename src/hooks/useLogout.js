@@ -7,7 +7,7 @@ export const useLogout = () => {
   const [error, setError] = useState(null)
   const [isPending, setIsPending] = useState(false)
   const { dispatch } = useAuthContext()
-  
+
   const logout = async () => {
     setError(null)
     setIsPending(true)
@@ -15,7 +15,7 @@ export const useLogout = () => {
     try {
       // sign the user out
       await projectAuth.signOut()
-      
+
       // dispatch logout action
       dispatch({ type: 'LOGOUT' })
 
@@ -23,9 +23,9 @@ export const useLogout = () => {
       if (!isCancelled) {
         setIsPending(false)
         setError(null)
-      } 
-    } 
-    catch(err) {
+      }
+    }
+    catch (err) {
       if (!isCancelled) {
         setError(err.message)
         setIsPending(false)
