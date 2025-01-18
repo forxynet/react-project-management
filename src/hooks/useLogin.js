@@ -16,11 +16,11 @@ export const useLogin = () => {
       // login
       const res = await projectAuth.signInWithEmailAndPassword(email, password)
 
+      // QHB update online status
       // update online status
-      //const documentRef = projectFirestore.collection('users').doc(res.user.uid)
-      //if (documentRef) {
-      //await documentRef.update({ online: true })
-      //}
+      const documentRef = projectFirestore.collection('users').doc(res.user.uid)
+      await documentRef.update({ online: true })
+      // QHB
 
       // dispatch login action
       dispatch({ type: 'LOGIN', payload: res.user })
