@@ -7,7 +7,6 @@ export default function Avatar({ user }) {
       {user && (
         <>
           <img src={user.photoURL} alt="user avatar" />
-
         </>
       )}
     </div>
