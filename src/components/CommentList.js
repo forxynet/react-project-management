@@ -1,5 +1,6 @@
 import React from 'react'
 import Avatar from './Avatar'
+import formatDistanceToNow from 'data-fns/formatDistanceToNow'
 
 export default function CommentList({ project }) {
   return (
@@ -14,7 +15,7 @@ export default function CommentList({ project }) {
                 <p>{comment.displayName}</p>
               </div>
               <div className="comment-date">
-                <p>date here</p>
+                <p>{formatDistanceToNow(comment.createdAt.toDate(), { addSuffix: true })}</p>
               </div>
               <div className="comment-content">
                 <p>{comment.content}</p>

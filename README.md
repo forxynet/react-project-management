@@ -16,4 +16,9 @@ select blow with press space
 9) What do you want to use as your public directory? build   
 10) Configure as a single-page app (rewrite all urls to /index.html)? (y/N) y   
 11) Set up automatic builds and deploys with GitHub? (y/N) n
-12) 
+
+
+# Deploy
+1) firebase deploy --only firestore
+2) npm run build
+3) firebase deploy
