@@ -3,7 +3,7 @@ import 'firebase/firestore'
 import 'firebase/auth'
 import 'firebase/storage'
 
-// you can put below your config
+// you should put your configuration below
 const firebaseConfig = {
   apiKey: "",
   authDomain: "",
