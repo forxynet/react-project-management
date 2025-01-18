@@ -5,7 +5,7 @@ import { timestamp } from '../../firebase/config';
 import { useAuthContext } from '../..//hooks/useAuthContext';
 import { useFirestore } from '../../hooks/useFirestore';
 import { useHistory } from 'react-router-dom';
-
+import ErrorMessages from '../../components/ErrorMessages';
 // styles
 import './Create.css'
 
@@ -131,7 +131,7 @@ export default function Create() {
           />
         </label>
         <button className='btn'>Add project</button>
-        {formError && <p className='error'>{formError}</p>}
+        {formError && <ErrorMessages error={formError} />}
       </form>
     </div>
   )

@@ -3,6 +3,8 @@ import { useCollection } from '../../hooks/useCollection'
 
 // styles
 import './Dashboard.css'
+import ProjectList from '../../components/ProjectList';
+import ErrorMessages from '../../components/ErrorMessages';
 
 export default function Dashboard() {
   const { documents, error } = useCollection('projects');
@@ -11,10 +13,8 @@ export default function Dashboard() {
   return (
     <div>
       <h2 className="page-title">Dashboard</h2>
-      {error && <p className='error'>{error}</p>}
-      {documents && documents.map(doc => (
-        <p key={doc.id}>{doc.name}</p>
-      ))}
+      {error && <ErrorMessages error={error} />}
+      {documents && <ProjectList documents={documents} />}
     </div>
   )
 }
