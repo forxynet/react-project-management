@@ -12,18 +12,18 @@ import Signup from './pages/signup/Signup'
 import Project from './pages/project/Project'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
-import OnlineUsers from './components/OnlineUsers';
+import OnlineUsers from './components/OnlineUsers'
 
 function App() {
-  const { user, authIsReady } = useAuthContext();
+  const { authIsReady, user } = useAuthContext()
 
   return (
     <div className="App">
       {authIsReady && (
         <BrowserRouter>
-          {user && <Sidebar user={user} />}
+          {user && <Sidebar />}
           <div className="container">
-            <Navbar user={user} />
+            <Navbar />
             <Switch>
               <Route exact path="/">
                 {!user && <Redirect to="/login" />}
@@ -42,7 +42,7 @@ function App() {
                 {!user && <Login />}
               </Route>
               <Route path="/signup">
-                {user && <Redirect to="/" />}
+                {user && user.displayName && <Redirect to="/" />}
                 {!user && <Signup />}
               </Route>
             </Switch>

@@ -1,14 +1,10 @@
-import React from 'react'
-import './Avatar.css';
+// styles
+import './Avatar.css'
 
-export default function Avatar({ user }) {
+export default function Avatar({ src }) {
   return (
-    <div className='avatar'>
-      {user && (
-        <>
-          <img src={user.photoURL} alt="user avatar" />
-        </>
-      )}
+    <div className="avatar">
+      <img src={src} alt="user avatar" />
     </div>
   )
 }
