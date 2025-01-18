@@ -38,17 +38,20 @@
 }
 
 /* project comments */
+
 .project-comments label {
   margin-bottom: 0px;
 }
 .project-comments textarea {
-  min-height: 40px;
-  font-size: 1.5em;
+  height: 70px;
+  min-height: 50px;
+  font-size: 1.2em;
 }
 
 /* comment list */
 .project-comments h4 {
   color: var(--heading-color);
+  margin-top: 25px;
 }
 .project-comments li {
   padding: 16px;

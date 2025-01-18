@@ -30,8 +30,9 @@ ul {
   color: var(--heading-color);
   display: inline-block;
 }
-.btn {
+.btn {  
   background: #fff;
+  margin-top: 10px;
   padding: 8px 12px;
   border-radius: 4px;
   color: var(--primary-color);
