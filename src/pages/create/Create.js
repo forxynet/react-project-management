@@ -86,53 +86,55 @@ export default function Create() {
 
   return (
     <div className='create-form'>
-      <h2 className=''>Create a new project</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          <span>Project name:</span>
-          <input
-            type="text"
-            required
-            onChange={(e) => setName(e.target.value)}
-            value={name}
-          />
-        </label>
-        <label>
-          <span>Project details:</span>
-          <textarea
-            type=""
-            required
-            onChange={(e) => setDetails(e.target.value)}
-            value={details}
-          />
-        </label>
-        <label>
-          <span>Set due date:</span>
-          <input
-            type="date"
-            required
-            onChange={(e) => setDueDate(e.target.value)}
-            value={dueDate}
-          />
-        </label>
-        <label>
-          <span>Project category:</span>
-          <Select
-            onChange={(option) => setCategory(option)}
-            options={categories}
-          />
-        </label>
-        <label>
-          <span>Assign to:</span>
-          <Select
-            onChange={(option) => setAssignedUsers(option)}
-            options={users}
-            isMulti
-          />
-        </label>
-        <button className='btn'>Add project</button>
-        {formError && <ErrorMessages error={formError} />}
-      </form>
+      <div className='content'>
+        <h2 className=''>Create a new project</h2>
+        <form onSubmit={handleSubmit}>
+          <label>
+            <span>Project name:</span>
+            <input
+              type="text"
+              required
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+            />
+          </label>
+          <label>
+            <span>Project details:</span>
+            <textarea
+              type=""
+              required
+              onChange={(e) => setDetails(e.target.value)}
+              value={details}
+            />
+          </label>
+          <label>
+            <span>Set due date:</span>
+            <input
+              type="date"
+              required
+              onChange={(e) => setDueDate(e.target.value)}
+              value={dueDate}
+            />
+          </label>
+          <label>
+            <span>Project category:</span>
+            <Select
+              onChange={(option) => setCategory(option)}
+              options={categories}
+            />
+          </label>
+          <label>
+            <span>Assign to:</span>
+            <Select
+              onChange={(option) => setAssignedUsers(option)}
+              options={users}
+              isMulti
+            />
+          </label>
+          <button className='btn'>Add project</button>
+          {formError && <ErrorMessages error={formError} />}
+        </form>
+      </div>
     </div>
   )
 }

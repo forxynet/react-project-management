@@ -1,6 +1,6 @@
 .sidebar {
-  width: 300px;
-  min-width: 300px;
+  width: 250px;
+  min-width: 250px;
   background: var(--primary-color);
   min-height: 100vh;
   box-sizing: border-box;
@@ -15,7 +15,7 @@
   font-weight: bold;
   text-align: center;
   letter-spacing: 1px;
-  padding: 40px 30px;
+  padding: 25px 0px;
   border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 .sidebar .links {
