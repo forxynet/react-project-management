@@ -4,8 +4,8 @@ import { useFirestore } from "../../hooks/useFirestore"
 import { useNavigate } from "react-router-dom"
 
 export default function ProjectSummary({ project }) {
+  //const { user } = useAuthCßontext();
   const { deleteDocument } = useFirestore('projects')
-  //const { user } = useAuthContext();
   const navigate = useNavigate();
 
   function handleDeleteProject(e) {
