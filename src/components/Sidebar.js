@@ -11,7 +11,7 @@ import AddIcon from '../assets/add_icon.svg'
 
 export default function Sidebar() {
   const { user } = useAuthContext()
-  console.log(user)
+
   return (
     <div className="sidebar">
       <div className="sidebar-content">
@@ -22,7 +22,7 @@ export default function Sidebar() {
         <nav className="links">
           <ul>
             <li>
-              <NavLink exact to="/">
+              <NavLink to="/">
                 <img src={DashboardIcon} alt="dashboard icon" />
                 <span>Dashboard</span>
               </NavLink>

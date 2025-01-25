@@ -16,7 +16,6 @@ import OnlineUsers from './components/OnlineUsers'
 
 function App() {
   const { authIsReady, user } = useAuthContext()
-
   return (
     <div className="App">
       {authIsReady && (
